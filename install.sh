@@ -19,7 +19,10 @@ echo "Version $VERSION"
 # Check dependencies
 echo "Installing dependencies..."
 apt-get install git libi2c-dev minicom dialog ppp -y
-rak_pppd/ppp-creator.sh HOLOGRAM ttyAMA0
+
+printf "Cellular provider APN name : "
+read APN_NAME
+rak_pppd/ppp-creator.sh $APN_NAME ttyAMA0
 
 # Install LoRaWAN packet forwarder repositories
 INSTALL_DIR="/opt/RAKLTE"
@@ -59,7 +62,5 @@ fi
 
 systemctl disable hciuart
 cd $SCRIPT_DIR
-cp gateway-config /usr/bin/gateway-config
-
 cp config.txt /boot/config.txt
 
