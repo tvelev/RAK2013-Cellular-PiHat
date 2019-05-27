@@ -54,7 +54,7 @@ fi
 
 systemctl disable hciuart
 cd $SCRIPT_DIR
-
+cp gateway-config /usr/bin/gateway-config
 cp config.txt /boot/config.txt
 
 
