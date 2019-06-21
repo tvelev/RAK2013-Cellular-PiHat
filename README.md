@@ -3,12 +3,19 @@ Install script for Raspberry
 
 
 Install git:
+
 sudo apt install git
+
 Clone this git:
-git clone https://github.com/tvelev/RAK2013-Cellular-PiHat.git 1
+
+git clone https://github.com/tvelev/RAK2013-Cellular-PiHat.git
+
 Open the folder:
+
 cd RAK2013-Cellular-PiHat
+
 Run the installer:
+
 sudo ./install.sh
 
 Insert the APN name when prompted.
